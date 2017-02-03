@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:id="@+id/tab">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        app:tabTextColor="@color/colorPrimaryDark"
+        app:tabSelectedTextColor="@color/bootstrap_brand_secondary_fill"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabTextAppearance="@style/Widget.AppCompat.ActionBar.TabText"
+        android:background="@drawable/simple_frame"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.93"
+            android:layout_below="@+id/tabs"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/fl"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:elevation="7dp"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/stat_sys_upload_done"
+                    app:backgroundTint="@color/bootstrap_brand_info"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/container">
+
+                </FrameLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

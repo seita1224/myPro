@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/holidayname"
+            android:text="main_item"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="24sp"
+            android:textColor="@color/bootstrap_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/holidaydate"
+            android:text="sub_item"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:layout_marginLeft="5dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/bootstrap_gray" />
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center_vertical">-->
+
+        <!--<Button-->
+            <!--android:text="削除"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/item_right" />-->
+
+    <!--</LinearLayout>-->
+</LinearLayout>

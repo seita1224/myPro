@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hiro.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StatuschangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConfirmationresultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ProductregistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".RankingSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".RankingResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        >
+        <activity
+            android:name=".ProductReview2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ProductreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".holiday.HolidayActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".AnniversaryAddDelDeialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".AddActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".holiday.DatepickerActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <receiver android:name=".AlarmReceiver" android:process=":remote"/>
+
+        <receiver android:name=".SetReceiver">
+            <intent-filter>
+
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+
+            <category android:name="android.intent.category.DEFAULT"/>
+
+            </intent-filter>
+
+        </receiver>
+        <service android:name=".AlarmReceiver$StatusService"/>
+    </application>
+
+</manifest>

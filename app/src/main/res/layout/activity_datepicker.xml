@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rankingactivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/kei"
+        tools:context="com.example.hiro.myapplication.holiday.DatepickerActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=""-->
+            <!--android:gravity="center"/>-->
+            <!---->
+            <!--<android.support.v7.widget.AppCompatSpinner-->
+            <!--android:id="@+id/rankingSpinner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04">
+
+                <TextView
+                    android:text="日付を入力してください"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTextView"
+                    android:layout_weight="1"
+                    android:layout_alignBaseline="@+id/title"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="24sp"
+                    android:textColor="@color/bootstrap_gray" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datepicker"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/ic_menu_my_calendar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@+id/nengappi" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/title"
+                    android:layout_weight="1"
+                    android:layout_toRightOf="@+id/datepicker"
+                    android:hint="日程名"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/bootstrap_gray"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贈る対象の情報を入力してください。"
+                android:id="@+id/InfotextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:layout_weight="0.04"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/bootstrap_gray_light"
+                android:enabled="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="検索したいプレゼントの種類を選択"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/button_receive_prezent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    app:bootstrapBrand="warning"
+                    app:bootstrapText="定番:貰ったプレゼント"/>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/button_want_prezent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    app:bootstrapText="流行:欲しいプレゼント"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="相手またはあなたの性別を選択"
+                android:gravity="center"/>
+
+            <RadioGroup
+                android:id="@+id/sex_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:text="性別の選択をしない"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/raidiobutton_no"
+                    android:layout_weight="0.3"
+                    android:layout_gravity="center"/>
+
+                <RadioButton
+                    android:text="男性"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/raidiobutton_man"
+                    android:layout_weight="0.3"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:enabled="true"/>
+
+                <RadioButton
+                    android:text="女性"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/raidiobutton_woman"
+                    android:layout_weight="0.3"
+                    android:textSize="30sp"
+                    android:enabled="true"
+                    android:layout_gravity="center" />
+            </RadioGroup>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Agespinner"
+                android:layout_marginTop="20dp"
+                android:entries="@array/list_age"
+                android:spinnerMode="dialog" />
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Genrespinner"
+                android:layout_marginTop="20dp"
+                android:entries="@array/list_genre"
+                android:spinnerMode="dialog" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Hobbiesspinner"
+                android:layout_marginTop="20dp"
+                android:entries="@array/list_hobbies"
+                android:spinnerMode="dialog" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Scenespinner"
+                android:layout_marginTop="20dp"
+                android:entries="@array/list_scene"
+                android:spinnerMode="dialog" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:text="登録"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/Searchbutton"
+                android:layout_marginTop="20dp"
+                app:bootstrapBrand="success"
+                app:roundedCorners="true"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>

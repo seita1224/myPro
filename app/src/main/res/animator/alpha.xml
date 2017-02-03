@@ -1,0 +1,46 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">//順番に再生
+    <set android:ordering="together">//同時に再生
+
+        //縮小
+        <objectAnimator
+            android:interpolator="@android:anim/decelerate_interpolator"
+            android:propertyName="scaleX"
+            android:duration="500"
+            android:valueFrom="1.0"
+            android:valueTo="0.7"
+            />
+        <objectAnimator
+            android:interpolator="@android:anim/decelerate_interpolator"
+            android:propertyName="scaleY"
+            android:duration="500"
+            android:valueFrom="1.0"
+            android:valueTo="0.7"
+            />
+    </set>
+    <set android:ordering="together">
+        　　//拡大
+        <objectAnimator
+            android:interpolator="@android:anim/decelerate_interpolator"
+            android:propertyName="scaleX"
+            android:duration="300"
+            android:valueFrom="0.7"
+            android:valueTo="1.3"
+            />
+        　　<objectAnimator
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:propertyName="scaleY"
+        android:duration="300"
+        android:valueFrom="0.7"
+        android:valueTo="1.3"
+        />
+    </set>
+    //フェードアウト
+    <objectAnimator
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:propertyName="alpha"
+        android:duration="300"
+        android:valueFrom="1.0"
+        android:valueTo="0.0"
+        />
+</set>

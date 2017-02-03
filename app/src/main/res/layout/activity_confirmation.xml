@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_confirmation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmationActivity"
+    android:background="@drawable/kei"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bootstrap:cardUseCompatPadding="true"
+        bootstrap:cardCornerRadius="3dp"
+        android:elevation="1dp"
+        bootstrap:cardBackgroundColor="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+            <TextView
+                android:text="レビューを投稿したいプレゼントの名前を入力してください。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toukoukensaku"
+                android:textSize="18sp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/bootstrap_brand_secondary_fill" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/textInputLayout2"
+                android:layout_width="match_parent"
+                android:background="@color/bootstrap_brand_secondary_fill"
+
+                android:layout_alignParentStart="false"
+                android:layout_below="@+id/toukoukensaku">
+
+                <EditText
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:id="@+id/search"
+                    android:textSize="24sp"
+                    android:hint="正しく入力してください。" />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bootstrap:cardUseCompatPadding="true"
+        bootstrap:cardCornerRadius="3dp"
+        android:elevation="1dp"
+        bootstrap:cardBackgroundColor="@color/colorPrimaryDark"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/cardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+            <TextView
+                android:text="検索結果"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kensaku"
+                android:textSize="24sp"
+                android:textColor="@color/bootstrap_brand_secondary_fill"
+                android:paddingLeft="10dp" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchlist"
+                android:background="@color/bootstrap_brand_secondary_fill"
+                android:elevation="1dp"
+                android:layout_alignParentStart="false"
+                android:layout_below="@+id/kensaku"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>
